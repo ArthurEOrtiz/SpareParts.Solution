@@ -1,0 +1,25 @@
+@{
+  Layout = "_Layout";
+}
+
+@model SpareParts.Models.Part
+
+<h4>Add a new task</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Description)
+  @Html.TextBoxFor(model => model.Description)
+
+  @Html.LabelFor(model => model.PartNumber)
+  @Html.TextBoxFor(model => model.PartNumber)
+
+  @Html.LabelFor(model => model.Manufacture)
+  @Html.TextBoxFor(model => model.Manufacture)
+
+  @Html.LabelFor(model => model.Vehicle)
+  @Html.DropDownList("VehicleId")
+
+  <input type="submit" value="Add new item" class="btn btn-default" />
+}
+<p>@Html.ActionLink("Show all items", "Index")</p>

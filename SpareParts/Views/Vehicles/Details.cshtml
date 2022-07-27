@@ -1,0 +1,12 @@
+@{
+  Layout = "_Layout";
+}
+
+@model SpareParts.Models.Vehicle
+
+<h2>Vehicle Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.Model): @Html.DisplayFor(model => model.Model)<h3>
+<p>@Html.ActionLink("Edit Vehicle", "Edit", new { id = Model.VehicleId })</p>
+<p>@Html.ActionLink("Delete Vehicle", "Delete", new { id = Model.VehicleId })</p>
+<p>@Html.ActionLink("Back to Vehicles", "Index")</p>

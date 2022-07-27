@@ -1,0 +1,30 @@
+@{
+  Layout = "_Layout";
+}
+
+@model SpareParts.Models.Part
+
+<h2>Edit</h2>
+
+<h4>Edit this task: @Html.DisplayFor(model => model.Description)</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.PartId)
+
+  @Html.LabelFor(model => model.Description)
+  @Html.EditorFor(model => model.Description)
+
+  @Html.LabelFor(model => model.PartNumber)
+  @Html.EditorFor(model => model.PartNumber)
+
+  @Html.LabelFor(model => model.Manufacture)
+  @Html.EditorFor(model => model.Manufacture)
+
+  @Html.LabelFor(model => model.Vehicle)
+  @Html.DropDownList("VehicleId")
+
+  <input type="submit" value="Save" />
+}
+
+<p>@Html.ActionLink("Back to list", "Index")</p>

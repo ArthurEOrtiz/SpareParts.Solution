@@ -5,6 +5,7 @@ namespace SpareParts.Models
   public class SparePartsContext : DbContext
   {
     public DbSet<Vehicle> Vehicles { get; set; }
+    public DbSet<Part> Parts { get; set; }
 
     public SparePartsContext(DbContextOptions options) : base(options) { }
 

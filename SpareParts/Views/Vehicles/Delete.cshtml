@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+
+@model SpareParts.Models.Vehicle
+
+<h2>Are you sure you want to delete this?</h2>
+
+@Html.DisplayNameFor(model => model.Model): @Html.DisplayFor(model => model.Model)
+@using (Html.BeginForm())
+{
+  <input type="submit" value="Delete" />
+}
+
+<p>@Html.ActionLink("Back to Vehicles", "Index")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

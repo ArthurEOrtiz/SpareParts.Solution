@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+@model SpareParts.Models.Vehicle
+
+<h1>Add a Vehicle</h1>
+<p>Add a Vehicle here:</p>
+
+@using (Html.BeginForm())
+{
+  @Html.Labelfor(model => model.Year)
+  @Html.TextBoxFor(model => model.Year)
+  
+  @Html.Labelfor(model => model.Make)
+  @Html.TextBoxFor(model => modelMake)
+
+  @Html.Labelfor(model => model.Model)
+  @Html.TextBoxFor(model => model.Model)
+}
+
+<p>@Html.ActionLink("Show all Vehicles", "Index")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
+
