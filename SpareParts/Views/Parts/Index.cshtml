@@ -14,7 +14,7 @@
 
 @foreach (Part part in Model)
 {
-  <li>@Html.ActionLink($"{parts.Description}", "Details", new { id = part.PartId }) | @part.Vehicle.Model</li>
+  <li>@Html.ActionLink($"{part.Description}", "Details", new { id = part.PartId }) | @part.Vehicle.Model</li>
 }
 
 <p>@Html.ActionLink("Add new part", "Create")</p>

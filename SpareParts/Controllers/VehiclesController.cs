@@ -7,7 +7,7 @@ using SpareParts.Models;
 
 namespace SpareParts.Controllers
 {
-  public class SparePartsController : Controller
+  public class VehiclesController : Controller
   {
       private readonly SparePartsContext _db;
 
@@ -28,7 +28,7 @@ namespace SpareParts.Controllers
       }
 
       [HttpPost]
-      public ActionResult Create(Vehicle Vehicle)
+      public ActionResult Create(Vehicle vehicle)
       {
         _db.Vehicles.Add(vehicle);
         _db.SaveChanges();

@@ -18,7 +18,7 @@ namespace SpareParts.Controllers
 
     public ActionResult Index()
     {
-      List<Part> model = _db.Parts.Include(part => part.Category).PartList();
+      List<Part> model = _db.Parts.Include(part => part.Vehicle).ToList();
       return View(model);
     }
 

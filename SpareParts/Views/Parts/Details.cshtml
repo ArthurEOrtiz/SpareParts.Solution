@@ -2,11 +2,11 @@
   Layout = "_Layout";
 }
 
-@model ToDoList.Models.Item
+@model SpareParts.Models.Part
 
 <h2>Part Details</h2>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)<h3>
 <p>@Html.ActionLink("Edit Part", "Edit", new { id = Model.PartId })</p>
 <p>@Html.ActionLink("Delete Part", "Delete", new { id = Model.PartId })</p>
-<p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Back to Parts", "Index")</p>

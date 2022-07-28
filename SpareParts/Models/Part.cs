@@ -2,7 +2,7 @@ namespace SpareParts.Models
 {
   public class Part
   {
-    public int PartsId { get; set; }
+    public int PartId { get; set; }
     public int VehicleId { get; set; }
     public string Description { get; set; }
     public string PartNumber { get; set; }
